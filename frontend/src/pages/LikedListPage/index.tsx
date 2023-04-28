@@ -18,7 +18,7 @@ interface DummyInfo {
 }
 const LikedListPage = () => {
   const paintings = dummy.paintings;
-
+  console.log(paintings);
   return (
     <LikedListContainer>
       <TitleContainer>

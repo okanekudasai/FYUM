@@ -15,23 +15,23 @@ export const LikedListContainer = styled.div`
 
 export const TitleContainer = styled.div`
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 10vh;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10vh;
+  margin-bottom: 7vh;
   width: 30vw;
 `;
 
 export const TitleP = styled.p`
   color: ${white};
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-family: "Kim jung chul Myungjo";
   font-weight: 700;
   margin: 0;
 `;
 
 export const TitleHr = styled.hr`
-  width: 50%;
+  width: 45%;
   margin-top: 0;
 `;
 
@@ -41,7 +41,7 @@ export const SwiperSettings = {
     draggable: true,
   },
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 4,
 };
 
 export const SwiperTitle = styled.p`
@@ -50,12 +50,11 @@ export const SwiperTitle = styled.p`
 `;
 
 export const SwiperDiv = styled.div`
-  width: 25vw;
-  height: 50vh;
+  width: 20vw;
+  height: 75vh;
 `;
 
 export const SwiperImgDiv = styled.div`
-  vertical-align: center;
   width: 100%;
 `;
 
