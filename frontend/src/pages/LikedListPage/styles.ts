@@ -10,7 +10,7 @@ export const LikedListContainer = styled.div`
   height: 100%;
   position: relative;
   background-color: ${black};
-  overflow-x: hidden;
+  overflow-y: hidden;
 `;
 
 export const TitleContainer = styled.div`
@@ -18,7 +18,7 @@ export const TitleContainer = styled.div`
   margin-top: 10vh;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 7vh;
+  margin-bottom: 10vh;
   width: 30vw;
 `;
 
@@ -36,11 +36,11 @@ export const TitleHr = styled.hr`
 `;
 
 export const SwiperSettings = {
-  spaceBetween: 20,
+  spaceBetween: 15,
   scrollbar: {
     draggable: true,
   },
-  loop: true,
+  // loop: true,
   slidesPerView: 4,
 };
 
@@ -62,4 +62,5 @@ export const SwiperImg = styled.img`
   object-fit: contain;
   width: 100%;
   height: 100%;
+  filter: drop-shadow(5px 3px 3px #424242);
 `;
