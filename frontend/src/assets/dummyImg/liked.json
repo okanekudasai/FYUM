@@ -2,8 +2,8 @@
   "paintings": [
     {
       "paintingId": 1,
-      "title": "Monalisa",
-      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg"
+      "title": "THE SCREAM",
+      "imcSrc": "https://dimg.donga.com/wps/NEWS/IMAGE/2019/09/25/97583483.2.jpg"
     },
     {
       "paintingId": 2,
@@ -32,8 +32,8 @@
     },
     {
       "paintingId": 7,
-      "title": "Monalisa",
-      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg"
+      "title": "Ultima Cena",
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg/450px-Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg"
     },
     {
       "paintingId": 8,
