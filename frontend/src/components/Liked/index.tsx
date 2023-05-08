@@ -15,7 +15,6 @@ const LikedList = () => {
       try {
         const res = await likedListApi();
         setData(res.data);
-        console.log(res);
       } catch (err) {
         console.log(err);
       }
@@ -23,7 +22,8 @@ const LikedList = () => {
     getLikedData();
   }, []);
 
-  console.log(data);
+  console.log(data.length);
+  const len = data.length;
   const goDetail = (id: number) => {
     navigate(`/detail/${id}`);
   };
@@ -36,6 +36,7 @@ const LikedList = () => {
             <ImageStyle
               key={item.paintingId}
               onClick={() => goDetail(item.paintingId)}
+              len={len}
             >
               {
                 <img

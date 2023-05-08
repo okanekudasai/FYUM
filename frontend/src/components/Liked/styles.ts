@@ -12,9 +12,9 @@ export const ImageTitleStyle = styled.div`
   color: ${white};
 `;
 
-export const ImageStyle = styled.div`
+export const ImageStyle = styled.div<{ len: number }>`
   height: 60%;
-  width: 100%;
+  width: ${(props) => (props.len > 5 ? "100%" : "auto")};
   display: flex;
   margin-left: 3%;
   margin-right: 3%;
