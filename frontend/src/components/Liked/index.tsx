@@ -30,11 +30,6 @@ const LikedList = () => {
 
   return (
     <div>
-      {/* {len === 0 ? (
-        <div ref={scrollRef}>
-          <NoContent>There is no artworks</NoContent>
-        </div>
-      ) : ( */}
       <ImageContainer ref={scrollRef}>
         {data &&
           data.map((item: any) => (
@@ -47,14 +42,13 @@ const LikedList = () => {
                 <img
                   src={item.imgSrc}
                   referrerPolicy="no-referrer"
-                  style={{ maxWidth: "150%" }}
+                  style={{ maxWidth: "100vw" }}
                 ></img>
               }
               <ImageTitleStyle>{item.title}</ImageTitleStyle>
             </ImageStyle>
           ))}
       </ImageContainer>
-      {/* )} */}
     </div>
   );
 };

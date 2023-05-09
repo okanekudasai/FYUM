@@ -21,7 +21,7 @@ export const ImageTitleStyle = styled.div`
 
 export const ImageStyle = styled.div<{ len: number }>`
   height: 60%;
-  width: ${(props) => (props.len > 5 ? "100%" : "auto")};
+  width: 100%;
   display: flex;
   margin-left: 3%;
   margin-right: 3%;
@@ -32,7 +32,7 @@ export const ImageStyle = styled.div<{ len: number }>`
   @media (max-width: 768px) {
     margin-bottom: 30%;
     font-size: 5vw;
-    width: 50vw;
+    width: 20vw;
     height: auto;
     margin-left: 13vw;
     box-shadow: none;
