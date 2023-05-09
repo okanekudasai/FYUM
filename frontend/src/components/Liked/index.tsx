@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { likedListApi } from "../../store/api";
 import { useHorizontalScroll } from "../utils/useSideScroll";
 import { ImageContainer } from "../../styles/listStyles";
-import { ImageTitleStyle, ImageStyle } from "./styles";
+import { ImageTitleStyle, ImageStyle, NoContent } from "./styles";
 
 const LikedList = () => {
   const scrollRef = useHorizontalScroll(window.innerWidth > 768);
@@ -30,6 +30,11 @@ const LikedList = () => {
 
   return (
     <div>
+      {/* {len === 0 ? (
+        <div ref={scrollRef}>
+          <NoContent>There is no artworks</NoContent>
+        </div>
+      ) : ( */}
       <ImageContainer ref={scrollRef}>
         {data &&
           data.map((item: any) => (
@@ -42,13 +47,14 @@ const LikedList = () => {
                 <img
                   src={item.imgSrc}
                   referrerPolicy="no-referrer"
-                  alt="찜 이미지"
+                  style={{ maxWidth: "150%" }}
                 ></img>
               }
               <ImageTitleStyle>{item.title}</ImageTitleStyle>
             </ImageStyle>
           ))}
       </ImageContainer>
+      {/* )} */}
     </div>
   );
 };
