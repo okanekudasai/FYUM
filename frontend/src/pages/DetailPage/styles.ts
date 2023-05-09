@@ -5,6 +5,8 @@ import { ReactComponent as EmptyBookmark } from "../../assets/icon/empty_bookmar
 import { ReactComponent as FullFrame } from "../../assets/icon/full_frame.svg";
 import { ReactComponent as FullBookmark } from "../../assets/icon/full_bookmark.svg";
 import { ReactComponent as Speaker } from "../../assets/icon/speaker.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 interface BackgroundImgProps {
   src: string;

@@ -109,7 +109,7 @@ const ArtList = () => {
                 style={{ maxWidth: "150%" }}
               ></img>
             )} */}
-            <ImageSrcStyle src={item.imgSrc}></ImageSrcStyle>
+            <ImageSrcStyle src={item.imgSrc} loading="eager"></ImageSrcStyle>
             <ImageTitleStyle> {item.titleOrigin}</ImageTitleStyle>
           </ImageStyle>
         ))}
