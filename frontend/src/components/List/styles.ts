@@ -2,6 +2,7 @@ import styled from "styled-components";
 import PainterBackImg from "../../assets/images/listPainterBackground.png";
 import ArtTrendBackImg from "../../assets/images/listArtTrendBackground.png";
 import ThemeBackImg from "../../assets/images/listThemeBackground.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const ListContainer = styled.div<{ add: string }>`
   height: 100%;
@@ -28,9 +29,10 @@ export const ImageStyle = styled.div`
   cursor: pointer;
 `;
 
-export const ImageSrcStyle = styled.img<{ src: string }>`
+export const ImageSrcStyle = styled(LazyLoadImage)<{ src: string }>`
   src: ${(props) => props.src};
   max-width: 100vw;
+  height: 50vh;
   @media screen and (max-width: 768px) {
     max-width: 150%;
   }

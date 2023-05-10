@@ -12,6 +12,7 @@ import {
 } from "../../styles/listStyles";
 import { DescriptionBtn, DescriptionP } from "../../pages/DetailPage/styles";
 import SideBar from "./SideBar";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ArtList = () => {
   const navigate = useNavigate();
@@ -109,7 +110,11 @@ const ArtList = () => {
                 style={{ maxWidth: "150%" }}
               ></img>
             )} */}
-            <ImageSrcStyle src={item.imgSrc} loading="eager"></ImageSrcStyle>
+            <ImageSrcStyle
+              src={item.imgSrc}
+              referrerPolicy="no-referrer"
+              effect="blur"
+            ></ImageSrcStyle>
             <ImageTitleStyle> {item.titleOrigin}</ImageTitleStyle>
           </ImageStyle>
         ))}

@@ -162,6 +162,7 @@ const DetailPage = () => {
         src={imgURL}
         description={description}
         referrerPolicy="no-referrer"
+        loading="lazy"
       />
       {description === true ? (
         <ContentContainer>
