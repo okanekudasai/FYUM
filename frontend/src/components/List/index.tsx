@@ -7,6 +7,7 @@ import { ImageStyle, ImageTitleStyle } from "../../styles/listStyles";
 
 import { getListApi } from "../../store/api";
 import { ListTitleContainer, ImageContainer } from "../../styles/listStyles";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const List = () => {
   const navigate = useNavigate();
@@ -110,7 +111,11 @@ const List = () => {
                   style={{ maxWidth: "150%" }}
                 ></img>
               )} */}
-              <ImageSrcStyle src={item.imgSrc}></ImageSrcStyle>
+              <ImageSrcStyle
+                src={item.imgSrc}
+                referrerPolicy="no-referrer"
+                effect="blur"
+              ></ImageSrcStyle>
               <ImageTitleStyle>
                 {item.nameOrigin}
                 <br></br>
