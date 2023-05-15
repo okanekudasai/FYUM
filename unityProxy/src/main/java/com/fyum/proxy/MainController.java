@@ -13,9 +13,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -34,10 +34,18 @@ public class MainController {
     String gptKey;
     @Value("${google.key}")
     String googleKey;
+    @Value("${clova.id}")
+    String clovaId;
+    @Value("${clova.secret}")
+    String clovaSecret;
+
+
     @GetMapping("/test")
     String test() {
         return "Hello World!";
     }
+
+
     @PostMapping("/urlToBase64")
     String[] urlToBase64(@RequestParam("url") String url) {
         String [] urlArray = url.split(",");
@@ -128,5 +136,46 @@ public class MainController {
         resultText = resultText.replace("&#39;", "");
         // 번역된 결과를 출력합니다.
         return resultText;
+    }
+
+    @GetMapping("/getTTS")
+    String getTTS(String description) {
+        try {
+            String apiURL = "https://naveropenapi.apigw.ntruss.com/tts-premium/v1/tts";
+            String encodedText = URLEncoder.encode(description, "UTF-8");
+            String params = "speaker=nara&text=" + encodedText;
+
+            URL url = new URL(apiURL);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("POST");
+            con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", clovaId);
+            con.setRequestProperty("X-NCP-APIGW-API-KEY", clovaSecret);
+            con.setDoOutput(true);
+
+            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+            wr.writeBytes(params);
+            wr.flush();
+            wr.close();
+
+            if (con.getResponseCode() == 200) {
+                InputStream is = con.getInputStream();
+                ByteArrayOutputStream bOutStream = new ByteArrayOutputStream();
+                byte[] bytes = new byte[1024];
+                int readBytes;
+                while ((readBytes = is.read(bytes)) != -1) {
+                    bOutStream.write(bytes, 0, readBytes);
+                }
+                byte[] bytesArr = bOutStream.toByteArray();
+                bOutStream.close();
+                is.close();
+
+                return Base64.getEncoder().encodeToString(bytesArr);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return null;
+
     }
 }
