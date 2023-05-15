@@ -138,8 +138,8 @@ public class MainController {
         return resultText;
     }
 
-    @GetMapping("/getTTS")
-    String getTTS(String description) {
+    @PostMapping("/getTTS")
+    String getTTS(@RequestParam("text") String description) {
         try {
             String apiURL = "https://naveropenapi.apigw.ntruss.com/tts-premium/v1/tts";
             String encodedText = URLEncoder.encode(description, "UTF-8");
