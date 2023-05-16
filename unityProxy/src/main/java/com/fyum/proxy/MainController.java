@@ -103,9 +103,9 @@ public class MainController {
 
         Map<String, Object> requestBody = new HashMap<>();
         requestBody.put("model","text-davinci-003");
-        requestBody.put("prompt", "I will give you the factors and probabilities for the picture, so please write an analysis." + gogogo);
+        requestBody.put("prompt", "I will give you the factors and probabilities for the picture, so please write an analysis shortly." + gogogo);
         requestBody.put("temperature", 1.0f);
-        requestBody.put("max_tokens", 100);
+        requestBody.put("max_tokens", 1000);
 
         HttpEntity<Map<String, Object>> requestEntity = new HttpEntity<>(requestBody, headers);
 
