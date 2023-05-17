@@ -103,7 +103,7 @@ public class MainController {
 
         Map<String, Object> requestBody = new HashMap<>();
         requestBody.put("model","text-davinci-003");
-        requestBody.put("prompt", "I will give you the factors and probabilities for the picture, so please write an analysis shortly." + gogogo);
+        requestBody.put("prompt", "I'll give you the elements that make up the picture and the degree of their relationship. Please make an analysis of the picture using some of the most closely related elements.");
         requestBody.put("temperature", 1.0f);
         requestBody.put("max_tokens", 1000);//
 
