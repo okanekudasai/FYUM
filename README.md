@@ -133,6 +133,14 @@ FY:UM(피움) 서비스는 시공간에 구애 받지 않으면서도 실제로 
 
 <img title="" src="assets/bee9967bf3aed2f2e232557495329563b83a5819.PNG" alt="3d_exhibition_mobile.PNG" width="204" data-align="center">
 
+##### 12. XR 페이지
+
+![XR1.gif](https://github.com/okanekudasai/versionTest/blob/master/ezgif-7-1cae790ab1.gif?raw=true)
+
+##### 13. XR 페이지2
+
+![XR2.gif](https://github.com/okanekudasai/versionTest/blob/master/ezgif-7-00f689f14f.gif?raw=true)
+
 ### 5️⃣ 팀원 소개
 
 * 이동하(VR/팀장)
